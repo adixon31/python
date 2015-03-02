@@ -7,27 +7,23 @@ import unittest, FamilyTree
 class FamilyTreeTestCase(unittest.TestCase):
 
 	def test_preOrder(self):
-		l = FamilyTree.preorder(FamilyTree.tree)
-		tupL = tuple(l)
-		self.assert_(tupL[0] == "Grandma", str(l))
-		self.assertFalse((tupL[0] == "Baby"), str(l))
-		self.assertIn("Sister", tupL, str(l))
+		preList = FamilyTree.preorder(FamilyTree.tree)
+		self.assert_(preList[0] == "Grandma", str(preList))
+		self.assertFalse((preList[0] == "Baby"), str(preList))
+		self.assertIn("Me", preList, str(preList))
 
 	def test_inOrder(self):
-		l = FamilyTree.inorder(FamilyTree.tree)
-		tupL = tuple(l)
-		self.assertNotEqual(tupL[0], "Grandma", str(l))
+		inList = FamilyTree.inorder(FamilyTree.tree)
+		self.assertNotEqual(inList[0], "Grandma", str(inList))
 
 
 	def test_postOrder(self):
-		l = FamilyTree.postorder(FamilyTree.tree)
-		tupL = tuple(l)
-		self.assert_(tupL[0] == "Cousin", str(l))
+		postList = FamilyTree.postorder(FamilyTree.tree)
+		self.assert_(postList[0] == "Cousin", str(postList))
 
 	def test_levelOrder(self):
-		l = FamilyTree.levelorder(FamilyTree.tree)
-		tupL = tuple(l)
-		self.assert_(tupL[0] == "Grandma", str(l))
+		levelList = FamilyTree.levelorder(FamilyTree.tree)
+		self.assert_(levelList[0] == "Grandma", str(levelList))
 
 if __name__ == '__main__':
 	unittest.main()

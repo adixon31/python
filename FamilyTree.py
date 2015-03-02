@@ -14,7 +14,7 @@ tree = Node('Grandma',
                  Node('Brother',
                       Node('Niece', None, None),
                       Node('Nephew', None, None)),
-                 Node('Sister',
+                 Node('Me',
                  Node('Baby', None, None), None)))
                  
 aList = []
@@ -59,14 +59,15 @@ def levelorder(node, more=None, visitor = toList):
 
 #------Used for testing code before PyUnit------IGNORE------#
 
-#stdout.write('  preorder: ')
-#preorder(tree)
-#print aList
+stdout.write('  preorder: ')
+preorder(tree)
+print aList
 #stdout.write('\n   inorder: ')
 #inorder(tree)
 #print aList
 #stdout.write('\n postorder: ')
 #postorder(tree)
+#print aList
 #stdout.write('\nlevelorder: ')
 #levelorder(tree)
 #print aList
