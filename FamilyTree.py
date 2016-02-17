@@ -1,6 +1,7 @@
 
 #FamilyTree
-#Majority of code taken from http://rosettacode.org/wiki/Tree_traversal#Python and editted to use as example.
+#Majority of code taken from http://rosettacode.org/wiki/Tree_traversal#Python and editted 
+#to use as an example for unit testing.
 
 __author__ = "Angel Dixon"
 
